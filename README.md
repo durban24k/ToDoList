@@ -2,6 +2,7 @@
 Have NODE.JS installed.
 
 Download/Clone the files from the repository
+in the folder where you have downloaded the files open a command line terminal
 In the command line(cmd) to install the dependencies execute : npm install
 
 Execute: node app.js

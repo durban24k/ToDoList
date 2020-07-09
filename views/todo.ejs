@@ -53,15 +53,27 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        .container ul li{
+            padding:5px;
+            width:100%;
+            height:auto;
+            font-size:12px;
+            align-items:center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Add item to the ToDo List</h1>
         <form action="http://localhost:3000/todo" class="form" method="POST">
-            <input id="item" autocomplete="off" type="text" placeholder="Type in a todo item...">
+            <input id="newlist" name="newlist" autocomplete="off" type="text" placeholder="Type in a todo item...">
             <button id="send" type="submit">Add Item</button>
         </form>
+        <ul>
+            <% for(let i=0;i<todo.length;i++){ %>
+                <li><%= todo[i]; %></li>
+            <% } %>
+        </ul>
     </div>
 </body>
 </html>

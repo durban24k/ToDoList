@@ -14,9 +14,54 @@
             font-family:"Arial",sans-serif;
             font-size:10px;
         }
+        .container{
+            min-height:600px;
+            width:700px;
+            align-items:center;
+            justify-content:center;
+            top:50%;
+            left:50%;
+            position:absolute;
+            margin:0 auto;
+            transform:translate(-50%,-50%);
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container h1{
+            align-items: center;
+            justify-content:center;
+            color:cadetblue;
+            margin:0 auto;
+        }
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button{
+            width: 100%;
+            background-color: #11c8ff;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>EJS TEMPLATE</h1>
+    <div class="container">
+        <h1>Add item to the ToDo List</h1>
+        <form action="http://localhost:3000/todo" class="form" method="POST">
+            <input id="item" autocomplete="off" type="text" placeholder="Type in a todo item...">
+            <button id="send" type="submit">Add Item</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 let todo = [];
 app.get("/",(req,res)=>{
-    res.render("todo.ejs",{todo :todo});
+    res.render("todo.ejs",{todo:todo});
 });
 app.post("/todo",(req,res)=>{
     let list = req.body.newlist;

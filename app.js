@@ -16,15 +16,15 @@ let todoSchema = new mongoose.Schema({
     name: String
 });
 
-let Todo = mongoose.model("Todo",todoSchema);
+let Todo = mongoose.model("list",todoSchema);
 
 // let todo = [];
 app.get("/",(req,res)=>{
-    Todo.find({},(err,todo)=>{
+    Todo.find({},(err,list)=>{
         if(err){
             console.log(err);
         }else{
-            res.render("todo.ejs",{todo:todo});
+            res.render("todo.ejs",{list:list});
         }
     });
 });
